@@ -191,6 +191,7 @@ p {
 /* Sections */
 .section {
     display: none;
+    color:#fff;
 }
 
 .section.active {
