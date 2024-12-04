@@ -190,7 +190,7 @@ p {
 
 /* Sections */
 .section {
-    display: none;
+    display: visible;
     color:#fff;
 }
 
