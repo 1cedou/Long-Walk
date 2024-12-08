@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Bienvenue sur le site de l\'Agence de Tourisme Spatial!');
 
-    // Ajouter des �toiles anim�es
+    // Ajouter des étoiles animées
     const starsContainer = document.createElement('div');
     starsContainer.classList.add('stars');
     document.body.appendChild(starsContainer);
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Cr�er l'effet de d�formation avec p5.js
+    // Créer l'effet de déformation avec p5.js
     const sketch = function(p) {
         let img;
         let distortionFactor = 0.01;
@@ -74,3 +74,30 @@ function showSection(sectionId) {
         section.style.display = section.id === sectionId ? 'block' : 'none';
     });
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+
+    function createShootingStar() {
+        const star = document.createElement("div");
+        star.classList.add("shooting-star");
+
+        // Position aléatoire et délais
+        const startX = Math.random() * window.innerWidth;
+        const startY = Math.random() * window.innerHeight;
+        const duration = Math.random() * 2 + 2; // Durée entre 2 et 4 secondes
+
+        star.style.left = `${startX}px`;
+        star.style.top = `${startY}px`;
+        star.style.animationDuration = `${duration}s`;
+
+        body.appendChild(star);
+
+        // Supprimez l'étoile après l'animation
+        star.addEventListener("animationend", () => {
+            star.remove();
+        });
+    }
+
+    // Générer une étoile filante toutes les secondes
+    setInterval(createShootingStar, 1000);
+});
