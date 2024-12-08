@@ -132,3 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Génération des boules toutes les 2 secondes
     setInterval(createBoule, 2000);
 });
+    // Génération des boules toutes les 2 secondes
+    setInterval(createBoule, 2000);
+});
