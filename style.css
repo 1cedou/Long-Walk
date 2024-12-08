@@ -287,15 +287,10 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align-last: center;
     line-height: 1.8; /* Augmentez légèrement pour plus de lisibilité */
 }
-/* Style pour les h1 */
-h1 {
-    color: #00f; /* Bleu classique */
-    text-align: center; /* Centré */
-    font-size: 2.5rem; /* Taille adaptée */
-    font-weight: bold;
+
    
   
-}
+
 
 
 
