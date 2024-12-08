@@ -101,3 +101,34 @@ document.addEventListener("DOMContentLoaded", () => {
     // Générer une étoile filante toutes les secondes
     setInterval(createShootingStar, 1000);
 });
+document.addEventListener("DOMContentLoaded", () => {
+    // Fonction pour créer une boule
+    function createBoule() {
+        const boule = document.createElement("div");
+        boule.classList.add("boule");
+
+        // Position aléatoire
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+
+        boule.style.left = `${x}px`;
+        boule.style.top = `${y}px`;
+
+        // Ajout de la boule au body
+        document.body.appendChild(boule);
+
+        // Explosion au clic
+        boule.addEventListener("click", () => {
+            boule.style.animation = "boule-explode 0.5s ease-out forwards";
+            boule.addEventListener("animationend", () => boule.remove());
+        });
+
+        // Suppression après un certain temps si non cliquée
+        setTimeout(() => {
+            if (document.body.contains(boule)) boule.remove();
+        }, 5000);
+    }
+
+    // Génération des boules toutes les 2 secondes
+    setInterval(createBoule, 2000);
+});
