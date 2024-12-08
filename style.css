@@ -227,3 +227,24 @@ p {
     color: #ff6347;
     background-color: rgba(255, 255, 255, 0.1);
 }
+/* Étoiles filantes */
+@keyframes shooting-star {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw) translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(45deg, white, transparent);
+    border-radius: 50%;
+    animation: shooting-star 3s ease-in-out infinite;
+}
+
