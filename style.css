@@ -1,16 +1,16 @@
-/* DÃ©gradÃ© trÃ¨s foncÃ© pour le fond */
+/* Dégradé très foncé pour le fond */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: linear-gradient(45deg, #000000, #0a0a2a); /* DÃ©gradÃ© foncÃ© presque noir */
+    background: linear-gradient(45deg, #000000, #0a0a2a); /* Dégradé foncé presque noir */
     background-size: 400% 400%;
     animation: gradient-animation 12s ease infinite; /* Animation fluide plus lente */
     color: #fff;
 }
 
-/* Animation pour le dÃ©gradÃ© */
+/* Animation pour le dégradé */
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
@@ -99,7 +99,7 @@ form button:hover {
     background-color: #ff4500;
 }
 
-/* Fond animÃ© avec des Ã©toiles */
+/* Fond animé avec des étoiles */
 body::before {
     content: "";
     position: absolute;
@@ -112,7 +112,7 @@ body::before {
     z-index: 1;
 }
 
-/* Ã‰toiles animÃ©es */
+/* Étoiles animées */
 @keyframes star-twinkle {
     0% { opacity: 0; }
     50% { opacity: 1; }
@@ -242,7 +242,7 @@ p {
     color: #ff6347;
     background-color: rgba(255, 255, 255, 0.1);
 }
-/* Ã‰toiles filantes */
+/* Étoiles filantes */
 @keyframes shooting-star {
     0% {
         transform: translateX(0) translateY(0);
@@ -262,20 +262,20 @@ p {
     border-radius: 50%;
     animation: shooting-star 3s ease-in-out infinite;
 }
-/* Texte justifiÃ© et centrÃ© */
+/* Texte justifié et centré */
 p, h1, h2, h3, h4, h5, h6 {
     text-align: justify;
-    text-align-last: center; /* Centrer la derniÃ¨re ligne */
+    text-align-last: center; /* Centrer la dernière ligne */
     line-height: 1.6; /* Espacement entre les lignes */
     margin-bottom: 1rem; /* Espacement sous chaque paragraphe */
-    hyphens: auto; /* GÃ©rer les coupures automatiques pour les longues phrases */
-    word-wrap: break-word; /* GÃ©rer les retours automatiques pour les mots longs */
+    hyphens: auto; /* Gérer les coupures automatiques pour les longues phrases */
+    word-wrap: break-word; /* Gérer les retours automatiques pour les mots longs */
 }
 
 /* Conteneur pour les sections */
 .section {
-    padding: 1rem; /* Espacement intÃ©rieur pour une meilleure lisibilitÃ© */
-    max-width: 800px; /* Largeur maximale pour Ã©viter des lignes trop longues */
+    padding: 1rem; /* Espacement intérieur pour une meilleure lisibilité */
+    max-width: 800px; /* Largeur maximale pour éviter des lignes trop longues */
     margin: 0 auto; /* Centrer le contenu horizontalement */
 }
 .section {
@@ -285,7 +285,7 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
     text-align: justify;
     text-align-last: center;
-    line-height: 1.8; /* Augmentez lÃ©gÃ¨rement pour plus de lisibilitÃ© */
+    line-height: 1.8; /* Augmentez légèrement pour plus de lisibilité */
 }
 /* Style des boules */
 .boule {
@@ -326,6 +326,7 @@ p, h1, h2, h3, h4, h5, h6 {
         opacity: 0;
     }
 }
+
 
    
 
