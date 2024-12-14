@@ -132,3 +132,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Génération des boules toutes les 2 secondes
     setInterval(createBoule, 2000);
 });
+function loadImages(sectionId, images) {
+    const container = document.getElementById(`${sectionId}-image-container`);
+    if (container) {
+        container.innerHTML = ''; // Réinitialise les images existantes
+        images.forEach((src) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `Image for ${sectionId}`;
+            container.appendChild(img);
+        });
+    }
+}
