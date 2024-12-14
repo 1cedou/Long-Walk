@@ -69,10 +69,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function showSection(sectionId) {
+    // Cacher toutes les sections
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
-        section.style.display = section.id === sectionId ? 'block' : 'none';
+        section.style.display = 'none';
     });
+
+    // Afficher la section demandée
+    const sectionToShow = document.getElementById(sectionId);
+    if (sectionToShow) {
+        sectionToShow.style.display = 'block';
+    }
 }
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
