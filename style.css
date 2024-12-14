@@ -326,7 +326,7 @@ p, h1, h2, h3, h4, h5, h6 {
         opacity: 0;
     }
 }
-/* Conteneur d'images pour chaque section */
+/* Style pour les conteneurs d'images */
 .image-container {
     display: flex;
     flex-wrap: wrap;
@@ -345,12 +345,31 @@ p, h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Effets au survol des images */
 .image-container img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-   
+/* Style pour un affichage cohérent des sections */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Ajout d'espacement entre les sections */
+.section + .section {
+    margin-top: 2rem;
+}
+
+/* Style pour le texte centré avec justification visuelle */
+h1, p {
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
 
    
   
