@@ -69,19 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function showSection(sectionId) {
-    // Cacher toutes les sections
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
-        section.classList.remove('active'); // Retirer la classe 'active' pour cacher
+        section.style.display = section.id === sectionId ? 'block' : 'none';
     });
-
-    // Afficher la section demandée
-    const sectionToShow = document.getElementById(sectionId);
-    if (sectionToShow) {
-        sectionToShow.classList.add('active'); // Ajouter la classe 'active' pour afficher
-    }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
 
@@ -140,5 +132,3 @@ document.addEventListener("DOMContentLoaded", () => {
     // Génération des boules toutes les 2 secondes
     setInterval(createBoule, 2000);
 });
-
-
