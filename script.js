@@ -132,4 +132,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // Génération des boules toutes les 2 secondes
     setInterval(createBoule, 2000);
 });
+// Obtenez tous les éléments d'image de la galerie
+const images = document.querySelectorAll('.gallery-image');
+
+// Récupérez la modale et l'image à afficher dans la modale
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const caption = document.getElementById('caption');
+
+// Ajoutez un événement de clic pour chaque image
+images.forEach(image => {
+    image.addEventListener('click', function () {
+        // Récupérez l'URL complète de l'image (data-full)
+        const fullImageSrc = image.getAttribute('data-full');
+        
+        // Affichez la modale
+        modal.style.display = 'block';
+        
+        // Changez la source de l'image modale et la légende
+        modalImage.src = fullImageSrc;
+        caption.innerHTML = image.alt;
+    });
+});
+
+// Lorsque l'utilisateur clique sur le bouton de fermeture (×), fermez la modale
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+
+// Lorsque l'utilisateur clique en dehors de l'image modale, fermez la modale
+window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
 
