@@ -326,19 +326,6 @@ p, h1, h2, h3, h4, h5, h6 {
         opacity: 0;
     }
 }
-/* Style général de la page */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Fond sombre rappelant l'espace */
-    color: white; /* Texte en blanc */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 /* Galerie d'images */
 .space-gallery {
     display: flex;
