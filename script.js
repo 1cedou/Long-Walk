@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Bienvenue sur le site de l\'Agence de Tourisme Spatial!');
 
-    // Ajouter des étoiles animées
+    // Ajouter des Ã©toiles animÃ©es
     const starsContainer = document.createElement('div');
     starsContainer.classList.add('stars');
     document.body.appendChild(starsContainer);
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Créer l'effet de déformation avec p5.js
+    // CrÃ©er l'effet de dÃ©formation avec p5.js
     const sketch = function(p) {
         let img;
         let distortionFactor = 0.01;
@@ -81,10 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const star = document.createElement("div");
         star.classList.add("shooting-star");
 
-        // Position aléatoire et délais
+        // Position alÃ©atoire et dÃ©lais
         const startX = Math.random() * window.innerWidth;
         const startY = Math.random() * window.innerHeight;
-        const duration = Math.random() * 2 + 2; // Durée entre 2 et 4 secondes
+        const duration = Math.random() * 2 + 2; // DurÃ©e entre 2 et 4 secondes
 
         star.style.left = `${startX}px`;
         star.style.top = `${startY}px`;
@@ -92,22 +92,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         body.appendChild(star);
 
-        // Supprimez l'étoile après l'animation
+        // Supprimez l'Ã©toile aprÃ¨s l'animation
         star.addEventListener("animationend", () => {
             star.remove();
         });
     }
 
-    // Générer une étoile filante toutes les secondes
+    // GÃ©nÃ©rer une Ã©toile filante toutes les secondes
     setInterval(createShootingStar, 1000);
 });
 document.addEventListener("DOMContentLoaded", () => {
-    // Fonction pour créer une boule
+    // Fonction pour crÃ©er une boule
     function createBoule() {
         const boule = document.createElement("div");
         boule.classList.add("boule");
 
-        // Position aléatoire
+        // Position alÃ©atoire
         const x = Math.random() * window.innerWidth;
         const y = Math.random() * window.innerHeight;
 
@@ -123,12 +123,12 @@ document.addEventListener("DOMContentLoaded", () => {
             boule.addEventListener("animationend", () => boule.remove());
         });
 
-        // Suppression après un certain temps si non cliquée
+        // Suppression aprÃ¨s un certain temps si non cliquÃ©e
         setTimeout(() => {
             if (document.body.contains(boule)) boule.remove();
         }, 5000);
     }
 
-    // Génération des boules toutes les 2 secondes
+    // GÃ©nÃ©ration des boules toutes les 2 secondes
     setInterval(createBoule, 2000);
 });
