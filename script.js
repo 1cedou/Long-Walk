@@ -194,3 +194,17 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     showSection('home');
 });
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section) => {
+        section.classList.remove('active'); // Retire la classe active
+    });
+
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active'); // Ajoute la classe active à la section cible
+        if (imagesData[sectionId]) {
+            loadImages(sectionId, imagesData[sectionId]); // Charge les images si définies
+        }
+    }
+}
