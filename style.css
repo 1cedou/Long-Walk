@@ -369,7 +369,16 @@ h1, p {
     line-height: 1.8;
     margin-bottom: 1rem;
 }
+.section {
+    display: none; /* Par défaut, toutes les sections sont masquées */
+    padding: 2rem;
+    text-align: center;
+}
 
+/* Active les sections visibles */
+.section.active {
+    display: block; /* Les sections avec la classe active sont visibles */
+}
 
    
   
