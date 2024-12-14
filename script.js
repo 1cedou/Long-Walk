@@ -137,10 +137,10 @@ function loadImages(sectionId, images) {
     if (container) {
         container.innerHTML = ''; // Réinitialise les images existantes
         images.forEach((src) => {
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = `Image for ${sectionId}`;
-            container.appendChild(img);
+            const homeImages = document.createElement('images');
+            Images.src = src;
+            Images.alt = `Image for ${sectionId}`;
+            container.appendChild(Images);
         });
     }
 }
