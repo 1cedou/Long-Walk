@@ -145,6 +145,30 @@ function loadImages(sectionId, images) {
         });
     }
 }
+
+// Définitions des images pour chaque section
+const imagesData = {
+    home: [
+        '/Long-Walk/images/2.png',
+        '/Long-Walk/images/5.png'
+    ],
+    services: [
+        '/Long-Walk/images/2.png',
+        '/Long-Walk/images/5.png'
+    ],
+    destinations: [
+        '/Long-Walk/images/2.png',
+        '/Long-Walk/images/5.png'
+    ],
+    contact: [
+        '/Long-Walk/images/2.png',
+        '/Long-Walk/images/5.png'
+    ],
+    about: [
+        '/Long-Walk/images/2.png'
+    ]
+};
+
 // Fonction pour afficher une section et charger les images correspondantes
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
@@ -160,6 +184,11 @@ function showSection(sectionId) {
         }
     }
 }
+
+// Chargement initial de la section "home"
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('home');
+});
 
 // Chargement initial de la section "home"
 document.addEventListener('DOMContentLoaded', () => {
