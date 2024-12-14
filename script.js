@@ -132,15 +132,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Génération des boules toutes les 2 secondes
     setInterval(createBoule, 2000);
 });
+// JavaScript pour charger dynamiquement des images dans chaque section
 function loadImages(sectionId, images) {
     const container = document.getElementById(`${sectionId}-image-container`);
     if (container) {
         container.innerHTML = ''; // Réinitialise les images existantes
         images.forEach((src) => {
-            const homeImages = document.createElement('images');
-            Images.src = src;
-            Images.alt = `Image for ${sectionId}`;
-            container.appendChild(Images);
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `Image for ${sectionId}`;
+            container.appendChild(img);
         });
     }
 }
+// Fonction pour afficher une section et charger les images correspondantes
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section) => {
+        section.style.display = 'none';
+    });
+
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.style.display = 'block';
+        if (imagesData[sectionId]) {
+            loadImages(sectionId, imagesData[sectionId]);
+        }
+    }
+}
+
+// Chargement initial de la section "home"
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('home');
+});
