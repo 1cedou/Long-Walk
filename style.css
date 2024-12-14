@@ -368,6 +368,58 @@ p, h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr; /* 1 colonne */
     }
 }
+/* Style général de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Fond sombre rappelant l'espace */
+    color: white; /* Texte en blanc */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Conteneur des images */
+.space-gallery-minimal {
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 20px; /* Espacement entre les images */
+    padding: 20px;
+    max-width: 1000px; /* Largeur maximale pour éviter un étirement sur grands écrans */
+    width: 90%;
+}
+
+/* Style des images */
+.image {
+    width: 45%; /* Chaque image occupe 45% de la largeur du conteneur */
+    height: auto; /* Maintient les proportions des images */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Bordure légère */
+}
+
+/* Effet au survol des images */
+.image:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille */
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.7); /* Ombre plus marquée */
+    border-color: rgba(255, 255, 255, 0.6); /* Bordure plus lumineuse */
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .space-gallery-minimal {
+        flex-direction: column; /* Affiche les images en colonne sur petits écrans */
+        gap: 15px; /* Espacement plus petit */
+    }
+
+    .image {
+        width: 80%; /* Les images occupent plus de place sur les petits écrans */
+    }
+}
 
    
 
