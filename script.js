@@ -72,15 +72,16 @@ function showSection(sectionId) {
     // Cacher toutes les sections
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
-        section.style.display = 'none';
+        section.classList.remove('active'); // Retirer la classe 'active' pour cacher
     });
 
     // Afficher la section demandée
     const sectionToShow = document.getElementById(sectionId);
     if (sectionToShow) {
-        sectionToShow.style.display = 'block';
+        sectionToShow.classList.add('active'); // Ajouter la classe 'active' pour afficher
     }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
 
