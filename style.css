@@ -400,7 +400,30 @@ p, h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     cursor: pointer;
 }
+/* Conteneur de la grille */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Colonnes flexibles */
+    gap: 10px; /* Espacement entre les images */
+    padding: 20px; /* Espacement autour de la grille */
+    max-width: 800px; /* Largeur maximale de la grille */
+    margin: auto; /* Centre la grille horizontalement */
+}
 
+/* Style des images */
+.image-grid img {
+    width: 100%; /* Adapte la largeur à la colonne */
+    height: auto; /* Conserve les proportions */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+/* Effet au survol */
+.image-grid img:hover {
+    transform: scale(1.05); /* Zoom léger */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre accentuée */
+}
 
    
   
