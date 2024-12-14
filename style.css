@@ -351,34 +351,6 @@ p, h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Style pour un affichage cohérent des sections */
-.section {
-    padding: 2rem;
-    text-align: center;
-}
-
-/* Ajout d'espacement entre les sections */
-.section + .section {
-    margin-top: 2rem;
-}
-
-/* Style pour le texte centré avec justification visuelle */
-h1, p {
-    text-align: justify;
-    text-align-last: center;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-.section {
-    display: none; /* Par défaut, toutes les sections sont masquées */
-    padding: 2rem;
-    text-align: center;
-}
-
-/* Active les sections visibles */
-.section.active {
-    display: block; /* Les sections avec la classe active sont visibles */
-}
 
    
   
