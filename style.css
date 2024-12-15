@@ -470,30 +470,23 @@ p, h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05); /* Zoom léger */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre accentuée */
 }
-/* Style global */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #000; /* Fond noir pour contraste */
-}
-
-/* Conteneur du logo */
 .logo-container {
     width: 300px;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: pause-rotate 6s infinite; /* Animation en boucle */
+    animation: pause-rotate 6s infinite; /* Boucle toutes les 6 secondes */
 }
 
-/* Animation pour rotation complète */
+/* Animation pour pause et rotation */
 @keyframes pause-rotate {
-    0%, 50% { transform: rotate(0deg); } /* Logo statique pendant 3 secondes */
-    100% { transform: rotate(360deg); } /* Rotation complète rapide */
+    0%, 50% { 
+        transform: rotate(0deg); /* Logo statique pendant les 3 premières secondes */
+    }
+    100% { 
+        transform: rotate(360deg); /* Rotation complète rapide */
+    }
 }
 
 /* Logo */
@@ -501,7 +494,7 @@ img {
     width: 100%;
     height: auto;
 }
-   
+
   
 
 
